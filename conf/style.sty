@@ -1,0 +1,45 @@
+%======================================================%
+%----- T-lab LaTeX Style template
+%======================================================%
+
+%------------------------------------------------------%
+% ！ 余白などの設定は研究室で統一しましょう．
+%------------------------------------------------------%
+
+%------------------------------------------------------%
+%- Basic page layout
+%------------------------------------------------------%
+
+\setlength{\textwidth}{175mm}			% 本文の幅
+\setlength{\fullwidth}{\textwidth}
+\setlength{\oddsidemargin}{18mm}		% 左余白
+\addtolength{\oddsidemargin}{-1in}
+\setlength{\textheight}{252mm}			% 本文の高さ
+\setlength{\topmargin}{18mm}			% 上余白
+\addtolength{\topmargin}{-1in}
+\setlength{\headsep}{0mm}				% ヘッダ
+\setlength{\headheight}{0mm}
+\setlength{\topskip}{0mm}				% ヘッダから本文まで
+\setlength{\footskip}{10mm}				% フッタから本文まで
+\setlength{\columnsep}{10mm}			% 段組の間
+
+\setlength{\intextsep}{6mm}				% 図と本文の間
+\setlength{\abovecaptionskip}{2mm}		%キャプション上の余白
+\setlength{\belowcaptionskip}{0mm}		%キャプション下の余白
+
+
+%------------------------------------------------------%
+%- Another layout
+%------------------------------------------------------%
+
+% ページ番号の位置指定
+\makeatletter
+\def\ps@plainfoot{%
+	\let\@mkboth\@gobbletwo
+	\let\@oddhead\@empty
+		\def\@oddfoot{\normalfont\hfil- \thepage\ -\hfil}%
+	\let\@evenhead\@empty
+	\let\@evenfoot\@oddfoot}
+\let\ps@plain\ps@plainfoot
+\makeatother
+\pagestyle{plain}

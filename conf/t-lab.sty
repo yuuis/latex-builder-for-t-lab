@@ -1,0 +1,81 @@
+%======================================================%
+%----- T-lab LaTeX Resume style
+%======================================================%
+
+%------------------------------------------------------%
+% Version 1.0
+% Create at 2012/01/23 - by Ryo Tanaka (sakura)
+%	- 作成・公開
+%
+% Version 1.1
+% Update at 2012/01/24 - by Ryo Tanaka (sakura)
+%	- セクション系を再定義 (余白を追加)
+%------------------------------------------------------%
+
+%------------------------------------------------------%
+% ！ このファイルはタイトルがはみ出るなどの
+%    事情がない限り，編集しない事をオススメします．
+%------------------------------------------------------%
+
+%------------------------------------------------------%
+%- Define
+%------------------------------------------------------%
+
+\def\ID#1{\gdef\@ID{#1}}
+\def\Author#1{\gdef\@Author{#1}}
+\def\aAuthor#1{\gdef\@aAuthor{#1}}
+\def\Title#1{\gdef\@Title{#1}}
+\def\Laboratory#1{\gdef\@Laboratory{#1}}
+\def\HeaderSubject#1{\gdef\@HeaderSubject{#1}}
+\def\Date#1{\gdef\@Date{#1}}
+
+
+%------------------------------------------------------%
+%- Header
+%------------------------------------------------------%
+
+\def\makeHeader{
+	\setlength{\baselineskip}{13.0pt}
+	{\small{\bf \@HeaderSubject （\@Date）
+	\hfill \@Laboratory{~}研究室}}\\
+	\begin{picture}(504,3)
+		\put(0,2){\line(1,0){499}}
+	\end{picture}
+	\begin{center}
+		{{\bf {\Large {\@Title}}}\\ \bigskip}
+		\vspace{-3mm} \large{\@ID{~~}\@Author{~~}(\@aAuthor)}
+	\end{center}
+	\vspace{-2mm}
+	\begin{picture}(504,3)
+		\put(0,2){\line(1,0){499}}
+	\end{picture}
+	\vspace{3mm}
+}
+
+
+%------------------------------------------------------%
+%- Redefine Sections
+%------------------------------------------------------%
+
+\makeatletter
+\def\section{\@startsection{section}{1}{\z@}% name, level, indent
+	{.5\Cvs \@plus.1\Cdp \@minus.1\Cdp}% beforeskip
+	{.05\Cvs \@plus.1\Cdp}% afterskip
+	{\reset@font\large\bfseries}}% style
+\def\subsection{\@startsection{subsection}{2}{\z@}%
+	{0.5\Cvs \@plus.05\Cdp \@minus.05\Cdp}%
+	{0.01\Cvs \@plus.01\Cdp}%
+	{\reset@font\normalsize\bfseries}}
+\def\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+	{0.1\Cvs \@plus.1\Cdp \@minus.1\Cdp}%
+	{0.01\Cvs \@plus.01\Cdp}%
+	{\reset@font\normalsize\bfseries}}
+\def\paragraph{\@startsection{paragraph}{4}{\z@}%
+	{1.5ex \@plus .2ex \@minus .2ex}%
+	{-1em}%
+	{\reset@font\normalsize\bfseries}}
+\def\subparagraph{\@startsection{subparagraph}{5}{\z@}%
+	{1.5ex \@plus .2ex \@minus .2ex}%
+	{-1em}%
+	{\reset@font\normalsize\bfseries}}
+\makeatother
