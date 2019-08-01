@@ -10,10 +10,10 @@
   ```sh
     cd latex-builder-for-t-lab
     vim Resume.tex
-    # 書く
+    # 頑張って書く
 
-    mv hoge.png ./figure
-    # 画像があったらここに入れる(png or jpg)
+    mv ~/hoge.png ./figure
+    # 画像を使うときはここに入れる(png or jpg)
   ```
 
 3. build
