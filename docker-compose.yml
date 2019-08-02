@@ -4,4 +4,4 @@ services:
     build: ./
     volumes: 
       - .:/workdir
-    command: make pdf
+    command: bash -c "make clean && make && make pdf"
