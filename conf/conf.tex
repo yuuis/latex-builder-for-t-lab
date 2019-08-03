@@ -132,3 +132,13 @@
 		\end{center}
 	\end{figure} \vspace{-4mm}
 }
+
+%- Image paste without column
+\newcommand{\figPstNC}[3]{
+	\vspace{3mm} \begin{figure*}[tbh]
+		\begin{center}
+			\fbox{	\includegraphics[width=#1mm]{./figure/#2.png}	}
+			\caption{#3}\label{fig:#2}
+		\end{center}
+	\end{figure*} \vspace{-4mm}
+}
