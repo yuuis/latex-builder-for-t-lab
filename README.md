@@ -14,7 +14,7 @@
     # 頑張って書く
 
     mv ~/hoge.png ./figure
-    # 画像を使うときはここに入れる(png or jpg)
+    # 画像を使うときはここに入れる(pngのみ)
   ```
 
 3. build
