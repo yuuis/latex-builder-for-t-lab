@@ -21,8 +21,3 @@
   ```sh
     ./build.sh
   ```
-
-4. open pdf
-  ```sh
-    open Resume.pdf
-  ```
